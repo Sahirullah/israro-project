@@ -1,73 +1,65 @@
 import './Products.css'
+import A4Paper from '../assets/A4 paper.jpeg'
+import Cocaine from '../assets/cocaine.jpeg'
+import Crystal from '../assets/Crystal.jpeg'
+import Hashish from '../assets/Hashish.jpeg'
+import HTCTablet from '../assets/HTC Tablate.jpeg'
+import IDPaper from '../assets/ID paper.jpeg'
+import Lyrica from '../assets/Lyrica.jpeg'
+import Weed from '../assets/weed.jpeg'
 
 const products = [
   {
     id: 1,
-    name: 'Product 1',
-    description: 'High-quality product with amazing features',
-    price: '$99.99',
-    icon: '📦'
+    name: 'A4 Paper',
+    description: 'High-quality A4 paper for all your printing needs',
+    image: A4Paper
   },
   {
     id: 2,
-    name: 'Product 2',
-    description: 'Premium solution for your needs',
-    price: '$149.99',
-    icon: '🎁'
+    name: 'Cocaine',
+    description: 'Premium quality product',
+    image: Cocaine
   },
   {
     id: 3,
-    name: 'Product 3',
-    description: 'Best-in-class performance and reliability',
-    price: '$199.99',
-    icon: '⭐'
+    name: 'Crystal',
+    description: 'Pure crystal product',
+    image: Crystal
   },
   {
     id: 4,
-    name: 'Product 4',
-    description: 'Innovative design meets functionality',
-    price: '$129.99',
-    icon: '🚀'
+    name: 'Hashish',
+    description: 'Premium hashish product',
+    image: Hashish
   },
   {
     id: 5,
-    name: 'Product 5',
-    description: 'Exceptional quality and durability',
-    price: '$179.99',
-    icon: '💎'
+    name: 'HTC Tablet',
+    description: 'Advanced tablet technology',
+    image: HTCTablet
   },
   {
     id: 6,
-    name: 'Product 6',
-    description: 'Advanced technology for modern needs',
-    price: '$159.99',
-    icon: '🔧'
+    name: 'ID Paper',
+    description: 'Official ID paper documents',
+    image: IDPaper
   },
   {
     id: 7,
-    name: 'Product 7',
-    description: 'Reliable and cost-effective solution',
-    price: '$119.99',
-    icon: '✨'
+    name: 'Lyrica',
+    description: 'Premium pharmaceutical product',
+    image: Lyrica
   },
   {
     id: 8,
-    name: 'Product 8',
-    description: 'Premium features at great value',
-    price: '$189.99',
-    icon: '🎯'
+    name: 'Weed',
+    description: 'Natural product',
+    image: Weed
   }
 ]
 
 export default function Products() {
-  const whatsappNumber = '+923479104637'
-  
-  const handleWhatsApp = (productName) => {
-    const message = `Hi, I'm interested in ${productName}`
-    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
-  }
-
   return (
     <section id="products" className="products">
       <div className="products-container">
@@ -76,19 +68,12 @@ export default function Products() {
         <div className="products-grid">
           {products.map(product => (
             <div key={product.id} className="product-card">
-              <div className="product-icon">{product.icon}</div>
+              <div className="product-image">
+                <img src={product.image} alt={product.name} />
+              </div>
               <h3 className="product-name">{product.name}</h3>
               <p className="product-description">{product.description}</p>
-              <div className="product-footer">
-                <span className="product-price">{product.price}</span>
-                <button className="product-btn">View Details</button>
-              </div>
-              <button 
-                className="whatsapp-btn"
-                onClick={() => handleWhatsApp(product.name)}
-              >
-                💬 WhatsApp
-              </button>
+              <button className="product-btn">View Details</button>
             </div>
           ))}
         </div>

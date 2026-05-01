@@ -74,8 +74,96 @@
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .places-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .place-card {
+    padding: 1.5rem;
+  }
+
+  .place-icon {
+    font-size: 2.5rem;
+  }
+
+  .place-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Tablet */
 @media (max-width: 768px) {
+  .places {
+    padding: 3rem 1.5rem;
+  }
+
+  .places-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .place-card {
+    padding: 1.25rem;
+  }
+
+  .place-icon {
+    font-size: 2rem;
+  }
+
+  .place-name {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .place-address,
+  .place-phone,
+  .place-hours {
+    font-size: 0.85rem;
+  }
+
+  .place-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .places {
+    padding: 2rem 1rem;
+  }
+
   .places-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .place-card {
+    padding: 1rem;
+  }
+
+  .place-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .place-name {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .place-address,
+  .place-phone,
+  .place-hours {
+    font-size: 0.8rem;
+    margin: 0.4rem 0;
+  }
+
+  .place-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }

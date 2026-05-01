@@ -1,12 +1,13 @@
 import './Navbar.css'
+import logoImg from '../assets/logo.png'
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <span className="logo-icon">🚀</span>
-          <span className="logo-text">YourBrand</span>
+          <img src={logoImg} alt="Logo" className="logo-image" />
+          <span className="logo-text">DrugHome</span>
         </div>
         <ul className="nav-menu">
           <li className="nav-item">
