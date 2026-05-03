@@ -81,7 +81,7 @@
   width: calc(100% - 2rem);
   margin: 0 1rem 1rem 1rem;
   padding: 0.6rem 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #25D366;
   color: white;
   border: none;
   border-radius: 25px;
@@ -92,8 +92,9 @@
 }
 
 .product-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
 }
 
 /* Tablet - 3 columns */

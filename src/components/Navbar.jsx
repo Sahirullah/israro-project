@@ -2,6 +2,14 @@ import './Navbar.css'
 import logoImg from '../assets/logo.png'
 
 export default function Navbar() {
+  const whatsappNumber = '+923479104637'
+  
+  const handleContactClick = () => {
+    const message = 'Hi! I would like to contact you.'
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -20,7 +28,13 @@ export default function Navbar() {
             <a href="#places" className="nav-link">Places</a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="nav-link contact-btn">Contact Us</a>
+            <button 
+              onClick={handleContactClick}
+              className="nav-link contact-btn"
+              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+            >
+              Contact Us
+            </button>
           </li>
         </ul>
       </div>

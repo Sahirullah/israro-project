@@ -60,6 +60,14 @@ const products = [
 ]
 
 export default function Products() {
+  const whatsappNumber = '+923479104637'
+  
+  const handleWhatsApp = (productName) => {
+    const message = `Hi, I'm interested in ${productName}`
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
   return (
     <section id="products" className="products">
       <div className="products-container">
@@ -73,7 +81,12 @@ export default function Products() {
               </div>
               <h3 className="product-name">{product.name}</h3>
               <p className="product-description">{product.description}</p>
-              <button className="product-btn">View Details</button>
+              <button 
+                className="product-btn"
+                onClick={() => handleWhatsApp(product.name)}
+              >
+                💬 WhatsApp
+              </button>
             </div>
           ))}
         </div>
